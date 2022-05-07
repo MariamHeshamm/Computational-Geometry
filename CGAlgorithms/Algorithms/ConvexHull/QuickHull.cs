@@ -49,10 +49,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
             List<Point> final_points=new List<Point>();
             if (p.Count() == 0)
                 return final_points;
-            //double height = 0;
-            //Point p1;
-            //Point p2;
-            //p1=new Point(l.End.X-l.Start.X , l.End.Y-l.Start.Y);
+            
             Point mx_point=p[0];
             double init_height=0;
 
@@ -60,11 +57,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
             {
                 double distance = farthest_distance2(l, p[i]);
                 double distance2 = farthest_distance(l, p[i]);
-                //p2 = new Point(p[i].X - l.Start.X, p[i].Y - l.Start.Y);
-                //var distance = Math.Sqrt((Math.Pow(l.End.X - l.Start.X, 2) + Math.Pow(l.End.Y - l.Start.Y, 2)));
-                //double cross=HelperMethods.CrossProduct(p1, p2);
-                //double cross_dist=Math.Abs()
-                //height = Math.Abs(cross/distance);
+                
                 if(distance>init_height)
                 {
                     init_height=distance;
@@ -119,8 +112,6 @@ namespace CGAlgorithms.Algorithms.ConvexHull
             }
             
             int num_of_points=points.Count();
-            //point_info min_x_point=new point_info(points[0].X,points[0].Y,0);
-            //point_info max_x_point=new point_info(points[0].X,points[0].Y,0);
 
             double max_x=points[0].X;
             double min_x=points[0].X;
