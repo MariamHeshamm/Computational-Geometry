@@ -39,7 +39,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
         }
         public override void Run(List<Point> points, List<Line> lines, List<Polygon> polygons, ref List<Point> outPoints, ref List<Line> outLines, ref List<Polygon> outPolygons)
         {
-            if (points.Count == 1 || points.Count == 2 || points.Count == 3)
+            if (points.Count == 1 || points.Count == 2)
             {
                 outPoints = points;
                 return;
@@ -57,7 +57,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
                 }
             }
 
-
+            //hna bas b3ml swao ma ben elpoint[min] w point[0] 3shann yb2a ashl wana b3ml sort
             Point p1 = points[0];
             Point minPoint = points[min];
             points[0] = minPoint;

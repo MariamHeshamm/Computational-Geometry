@@ -21,12 +21,12 @@ namespace CGAlgorithms.Algorithms.ConvexHull
         }
         public override void Run(List<Point> points, List<Line> lines, List<Polygon> polygons, ref List<Point> outPoints, ref List<Line> outLines, ref List<Polygon> outPolygons)
         {
-            if (points.Count == 1 || points.Count == 2 || points.Count == 3)
+            if (points.Count == 1 || points.Count == 2 )
             {
                 outPoints = points;
                 return;
             }
-            
+
             double minY = points[0].Y;
             int min = 0; //index llpoint
             for (int i = 1; i < points.Count; i++)
@@ -55,7 +55,7 @@ namespace CGAlgorithms.Algorithms.ConvexHull
                         continue;
                     }
                     double angle = calculate_angle_Between_point_and_baseline(points[all_points[all_points.Count - 1]], forvector, points[k], points[all_points[all_points.Count - 1]]);
-//                    var distance = Math.Sqrt((Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
+                    //                    var distance = Math.Sqrt((Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
                     var distance = Math.Sqrt((Math.Pow(points[k].X - points[all_points[all_points.Count - 1]].X, 2) + Math.Pow(points[k].Y - points[all_points[all_points.Count - 1]].Y, 2)));
                     if (angle < 0)
                     {
